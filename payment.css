@@ -1,0 +1,338 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+.wrapper {
+    background-color: #E8F7FD;
+
+}
+
+.container {
+    width: 752px;
+    height: auto;
+    background-color: #fff;
+    margin: 80px auto;
+    margin-bottom: 40px;
+}
+
+.logo {
+    display: inline-block;
+    width: calc(100% - 80px);
+    margin: 24px 40px;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,51,102,0.3);
+    padding-bottom: 24px;
+}
+
+.blue-logo {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+    
+}
+
+.payment {
+    width: calc(100% - 80px);
+    margin: 24px 40px;
+}
+
+.heading-2 {
+font-size: 24px;
+line-height: 28px;
+color: #003366;
+margin-bottom: 24px;
+}
+
+
+/*****************************************************SSL BADGE****************************************************/
+
+.ssl-badge {
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    padding: 24px;
+    padding-right: 0;
+}
+
+.ssl-txt {
+    margin: 0;
+    font-size: 15px;
+    line-height: 16px;
+    color: #003366;
+    margin-right: 32px;
+}
+
+.security .mdi {
+    color: #38BDEA;
+    font-size: 22px;
+    margin-right: 12px;
+    line-height: 22px;
+}
+
+.ssl-logos {
+    display: flex;
+    align-items: center;
+    
+}
+
+.visa, .mastercard{
+    border: 1px solid #BAE8F8;
+    background-color: #fff;
+    
+}
+
+.mastercard {
+    max-height: 32px;
+    padding: 7px 9px;
+}
+
+.visa {
+    padding: 9px 5px;
+}
+
+
+.visa, .mastercard {
+    margin-right: 7.67px;
+}
+
+
+/*-------------------------FORM---------------------------------*/
+.form {
+    margin-top: 40px;
+}
+
+.cardholders, .cardnumber {
+    margin-bottom: 24px;
+}
+
+#card-holders:focus, #card-number:focus, #security-number:focus, .validation select:focus {
+    outline: none;
+    border: 1px solid #38BDEA;
+
+}
+
+#card-number {
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%, right 16px top 50%;
+}
+
+.cardholders label, .cardnumber label, .validation label {
+    display: inline-block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.cardholders input, .cardnumber input {
+    display: block;
+    width: 100%;
+    border: 1px solid #BAE8F8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 14px 16px;
+
+    /*text*/
+    font-size: 16px;
+    line-height: 19px;
+    color: #003366;
+}
+
+input::placeholder {
+    font-size: 16px;
+    line-height: 19px;
+    color: #003366;
+    opacity: 0.5;
+}
+
+
+/********************************************************VALIDATION*********************************************/
+
+.validation {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    
+}
+
+.validation input{
+    border: 1px solid #BAE8F8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 14px 16px;
+
+    font-size: 16px;
+    line-height: 19px;
+    color: #003366;
+}
+
+.validation .security-num input{
+    margin-right: 0;
+}
+
+.validation .security-num .mdi {
+    color: #38BDEA;
+    font-size: 20px;
+    line-height: 15px;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+
+.security-center {
+    display: flex;
+    align-items: center;
+}
+
+.month-validation, .year-validation {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+    position: relative;
+    min-width: 205px;
+}
+
+li {
+    list-style: none;
+}
+
+.month-placeholder, .year-placeholder {
+    border: 1px solid #BAE8F8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 14px 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.month-placeholder .mdi, .year-placeholder .mdi {
+    font-size: 20px;
+    color: rgba(56,189,234,0.5);
+    position: absolute;
+    right: 10px;
+    
+}
+
+.months, .years {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #BAE8F8;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 205px;
+    display: none;
+}
+
+.month-validation.active .months, .year-validation.active .years{
+    display: block;
+}
+
+.months::-webkit-scrollbar, .years::-webkit-scrollbar {
+    width: 10px;
+  }
+
+.months::-webkit-scrollbar-track, .years::-webkit-scrollbar-track {
+    background: #F2F2F2;
+    border-radius: 10px; 
+  }
+
+.months::-webkit-scrollbar-thumb, .years::-webkit-scrollbar-thumb {
+    background: #BAE8F8; 
+    border-radius: 10px;
+  }
+
+.months::-webkit-scrollbar-thumb:hover, .years::-webkit-scrollbar-thumb:hover {
+    background: #38BDEA;; 
+  }
+
+.month, .year {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+.month:hover, .year:hover {
+    background-color: #00A3DE;
+    color: white;
+}
+
+/********************************************Bottom logos*****************************************/
+.logos-bottom {
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 40px;
+}
+
+.logo-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.visa-2 {
+    margin-right: 16px;
+  }
+
+/***************************************************Button*********************************************************/
+
+.button {
+    width: 752px;
+    height: auto;
+    margin: auto;
+    position: relative;
+    margin-bottom: 265px;
+}
+
+button {
+    position: absolute;
+    right: 0;
+    background: #27AE60;
+    border-radius: 4px;
+    padding: 15px 61px;
+    border: none;
+
+    /*text*/
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+    
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00A3DE;
+}
+
+button:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+

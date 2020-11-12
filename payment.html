@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/5.1.45/css/materialdesignicons.min.css"
+    />
+</head>
+<body class="wrapper">
+        <form action="#">
+            <div class="container">
+                <div class="logo">
+                        <img
+                        src="images/suber-logo-blue.svg"
+                        alt="suuber"
+                        loading="lazy"
+                        class="blue-logo"
+                        />
+                        
+                </div>
+                
+                <div class="payment">
+                    <h2 class="heading-2">Kartenzahlung</h2>
+                    <div class="ssl-badge">
+                        <div class="security"><span class="mdi mdi-shield-lock"></span></div>
+                        <p class="ssl-txt">Diese Seite ist mit SSL verschlüsselt, um Ihre Daten zu schützen.</p>
+                        <div class="ssl-logos">
+                            <img src="images/visa-logo.png" alt="VISA logo" class="visa">
+                            <img src="images/mastercard-logo.png" alt="MASTERCARD logo" class="mastercard">
+                            <img src="images/norton-logo.png" alt="NORTON logo" class="norton">
+                        </div>
+                    </div>
+                    <div class="form">
+                        <div class="cardholders">
+                            <label for="card-holders">Karteninhaber</label>
+                            <input type="text" id="card-holders" placeholder="Vorname und Name">
+                        </div>
+                        <div class="cardnumber">
+                            <label for="card-number">Kartennummer</label>
+                            <input type="text" id="card-number" maxlength="24" onkeyup="spaceCardInput()" placeholder="Bitte auswählen">
+                        </div>
+                        <div class="validation">
+                            <div class="monthvalidation">
+                                <label for="month-validation">Gültig bis Monat</label>
+                                <div class="month-validation" id="month-validation">
+                                    <ul class="month-placeholder" onClick="monthToggleClass()">
+                                        <li class="month-placeholder-item">Monat auswählen<span class="mdi mdi-chevron-down"></span></li>
+                                    </ul>
+                                    <ul class="months">
+                                        <li class="month" onClick="monthRemoveClass('01')">01</li>
+                                        <li class="month" onClick="monthRemoveClass('02')">02</li>
+                                        <li class="month" onClick="monthRemoveClass('03')">03</li>
+                                        <li class="month" onClick="monthRemoveClass('04')">04</li>
+                                        <li class="month" onClick="monthRemoveClass('05')">06</li>
+                                        <li class="month" onClick="monthRemoveClass('06')">05</li>
+                                        <li class="month" onClick="monthRemoveClass('07')">07</li>
+                                        <li class="month" onClick="monthRemoveClass('08')">08</li>
+                                        <li class="month" onClick="monthRemoveClass('09')">09</li>
+                                        <li class="month" onClick="monthRemoveClass('10')">10</li>
+                                        <li class="month" onClick="monthRemoveClass('11')">11</li>
+                                        <li class="month" onClick="monthRemoveClass('12')">12</li>                                    
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="yearvalidation">
+                                <label for="year-validation">Gültig bis Jahr</label>
+                                <div class="year-validation" id="year-validation">
+                                    <ul class="year-placeholder" onClick="yearToggleClass()">
+                                        <li class="year-placeholder-item">Jahr auswählen<span class="mdi mdi-chevron-down"></span></li>
+                                    </ul>
+                                    <ul class="years">
+                                       <!-- Years will be added dynamically with javascript -->
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="security-num">  
+                                <div class="security-center">
+                                    <label for="security-number">Kartenprüfnummer</label>
+                                    <span class="mdi mdi-information-outline" title="drei oder vier Ziffern"></span>
+                                </div>
+                                <input type="text" id="security-number" maxlength="4" placeholder="CVV2/CVC2">
+                            </div>
+                        </div>
+                        <div class="logos-bottom">
+                            <div class="logo-bottom">
+                                <img src="images/visa-2.png" alt="VISA" class="visa-2">
+                                <img src="images/mastercard2.png" alt="MASTERCARD" class="mastercard2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button>Bestätigen</button>
+            </div>
+        </form>
+        <script src="main.js"></script>
+</body>
+</html>
